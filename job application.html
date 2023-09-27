@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: white;
+        }
+        .container{
+            max-width: 900px;
+            margin:  0 auto;
+        }
+        .apply_box{
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            margin: 0 auto;
+            box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .title_small{
+            font-size: 20px;
+        }
+        .form_container{
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 20px;
+        }
+        .form_control{
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        input,
+        select,
+        textarea{
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        input:focus{
+            outline-color: red;
+        }
+        .button_container{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        button{
+            background-color: red;
+            border: transparent solid 2px;
+            padding: 5px 10px;
+            color: white;
+            border-radius: 8px;
+            transition: 0.3s ease-in;
+        }
+        button{
+            color: white;
+            border-radius: 8px;
+            transition: 0.3s ease-in;
+        }
+        button:hover{
+            background-color: white;
+            border: 2px solid red;
+            color: black;
+            transition: 0.3s ease-out;
+            cursor: pointer;
+        }
+        .textarea_control{
+            grid-column: 1 / span 2;
+        }
+        .textarea_control textarea{
+            width: 100%;
+        }
+        @media (max-width:460px){
+            .textarea_control{
+                grid-column: 1 / span 1;
+            }
+            };
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="apply_box">
+            <h1>
+                Job Application<span style="color: blue;" class="title_small">(web)</span>
+            </h1>
+            <form action="">
+                <div class="form_container">
+                    <div class="form_control">
+                        <label for="First_Name">First Name</label>
+                        <input
+                        id="First_Name"
+                        name="First_Name"
+                        
+                        />
+                    </div>
+                    <div class="form_control">
+                        <label for="Last_Name">Last Name</label>
+                        <input
+                        id="Last_Name"
+                        name="Last_Name"
+                        
+                        />
+                </div>
+                <div class="form_control">
+                    <label for="email">Email</label>
+                    <input
+                    type="email"
+                    id="email"
+                    name="email"
+                   
+                    />
+                    </div>
+                    <div class="form_control">
+                        <label for="job_role">Job Role</label>
+                        <select id="job_role" name="job_role">
+                            <option value="">select job role</option>
+                            <option value="frontend">Frontend Developer</option>
+                            <option value="backend">Backend Developer</option>
+                        </select>
+                    </div>
+                    <div class="textarea_control">
+                        <label for="address">Address</label>
+                        <textarea
+                        id="address"
+                        name="address"
+                        row="4"
+                        col="50"
+                       
+                        ></textarea>
+                    </div>
+                    <div class="form_control">
+                        <label for="city">city</label>
+                        <input
+                        id="city"
+                        name="city"
+                       
+                        />  
+                    </div>
+                    <div class="form_control">
+                        <label for="pincode">Pincode</label>
+                        <input
+                        type="number"
+                        id="pincode"
+                        name="pincode"
+                       
+                        />  
+                        </div>
+                        <div class="form_control">
+                            <label for="date">Date</label>
+                            <input
+                            type="number"
+                            id="date"
+                            name="date"
+                            placeholder="10/01/2022"
+                            />  
+                            </div>
+                            <div class="form_control">
+                                <label for="upload">Upload Your CV</label>
+                                <input
+                                type="file"
+                                id="upload"
+                                name="upload"
+                                />  
+                                </div>
+                                </div>
+                                <div class="button_container">
+                                    <button type="submit">Apply Now</button>
+                                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
